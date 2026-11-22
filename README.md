@@ -35,14 +35,14 @@ Managing cluster state directly from the Dataproc dashboard. Stopping a cluster 
 ### Monitoring
 Explored the built-in Cloud Monitoring metrics for Dataproc, focusing on **YARN Memory**, **YARN Pending/Available Containers**, **HDFS Storage Utilization**, and **CPU usage** to understand how to spot resource bottlenecks or idle clusters.
 
-![Dataproc Monitoring Dashboard](assets/monitoring1.png)
-![Dataproc Monitoring Dashboard](assets/monitoring2.png)
-![Dataproc Monitoring Dashboard](assets/monitoring3.png)
+![Dataproc Monitoring Dashboard](assets/Monitoring1.png)
+![Dataproc Monitoring Dashboard](assets/Monitoring2.png)
+![Dataproc Monitoring Dashboard](assets/Monitoring3.png)
 
 ### Nodes (Master & Worker VMs)
 Inspected the underlying Compute Engine VM instances provisioned by Dataproc—separating the **Master (Driver) node** (`-m`) that coordinates YARN/Spark from the **Worker nodes** (`-w-0`, `-w-1`) that execute distributed tasks.
 
-![Cluster Nodes](assets/nodes.png)
+![Cluster Nodes](assets/Nodes.png)
 
 ### SSH & CLI Access
 Connected directly into the Master node via browser SSH to explore the Linux environment, inspect cluster configurations, and see how jobs and HDFS commands (`hdfs dfs`, `spark-submit`) can be executed directly from the terminal.
@@ -52,17 +52,22 @@ Connected directly into the Master node via browser SSH to explore the Linux env
 ### Web Interfaces (Component Gateway)
 Used Dataproc's **Component Gateway** to access internal Hadoop, Spark web UIs and Jupyter Labs over HTTPS without opening public firewall ports or manually configuring SSH SOCKS proxies.
 
-![Web Interfaces Component Gateway](assets/webinterfaces.png)
+![Web Interfaces Component Gateway](assets/WebInterfaces.png)
 
 ### YARN ResourceManager
 Navigated the YARN UI to inspect cluster-wide compute capacity (total memory and vCores across workers), active nodes, scheduler queues, and application execution status.
 
-![YARN ResourceManager UI](assets/yarn.png)
+![YARN ResourceManager UI](assets/Yarn.png)
+
+### Hadoop DataNode
+Launched **Hadoop DataNode** through the Component Gateway to interact with the DataNodes and its utilities.
+
+![Hadoop DataNode](assets/HadoopDatanode.png)
 
 ### JupyterLab
 Launched **JupyterLab** through the Component Gateway to run interactive PySpark sessions directly against the managed cluster rather than a single local machine.
 
-![JupyterLab on Dataproc](assets/jupyterlab.png)
+![JupyterLab on Dataproc](assets/JupyterLab.png)
 
 ---
 
